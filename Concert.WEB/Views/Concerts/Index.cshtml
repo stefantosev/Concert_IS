@@ -1,0 +1,86 @@
+﻿@model List<Concert.WEB.Models.ConcertLab>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Concerts</h1>
+
+<p>
+    <a class="btn btn-primary" asp-action="Create">Create New Concert</a>
+</p>
+
+@* ctrl + k + c  - za komentiranje*@
+@* da gi prikazeme kako grids *@
+<div class="container">
+
+   @*TODO: za sekoj tri da napravime nov red  *@
+    @for (int i = 0; i < Model.Count; i++)
+    {   <div class="column md-4">
+            <div class="card" style="width: 18rem;">
+                <img src="@Model[i].ImageUrl" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">@Model[i].ConcertName</h5>
+                    <p class="card-text">@Model[i].ConcertPlace</p>
+                    <p class="card-text">Price: @Model[i].ConcertPrice</p>
+                    <p class="card-text">Date: @Model[i].ConcertDate.ToString()</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                    <a class="btn btn-primary"  asp-action="Edit" asp-route-id="@Model[i].Id">Edit</a> |
+                    <a class="btn btn-primary"  asp-action="Details" asp-route-id="@Model[i].Id">Details</a> |
+                    <a class="btn btn-primary"  asp-action="Delete" asp-route-id="@Model[i].Id">Delete</a>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+@* Star nacin za prikazuenje *@
+@* <table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ConcertName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ConcertDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ConcertPrice)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ConcertPlace)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ImageUrl)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ConcertName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ConcertDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ConcertPrice)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ConcertPlace)
+            </td>
+            <td>
+                <img src ="@item.ImageUrl" alt="Slika">
+     
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table> *@

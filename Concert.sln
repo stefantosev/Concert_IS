@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34622.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Concert.WEB", "Concert.WEB\Concert.WEB.csproj", "{BCE0AB3F-B0A6-42FB-992B-7E5DF4AEAACA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BCE0AB3F-B0A6-42FB-992B-7E5DF4AEAACA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCE0AB3F-B0A6-42FB-992B-7E5DF4AEAACA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCE0AB3F-B0A6-42FB-992B-7E5DF4AEAACA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCE0AB3F-B0A6-42FB-992B-7E5DF4AEAACA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {91820533-9A54-4FDB-8DBC-66592ADF1C3A}
+	EndGlobalSection
+EndGlobal
