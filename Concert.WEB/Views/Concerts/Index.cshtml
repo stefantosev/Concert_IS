@@ -6,21 +6,26 @@
 
 <h1>Concerts</h1>
 
-<p>
-    <a class="btn btn-primary" asp-action="Create">Create New Concert</a>
+<p style="display: flex; justify-content: space-between;">
+        <a class="btn btn-primary" asp-action="Create">Create New Concert</a>
+        <a class="btn btn-primary" asp-controller="Tickets" asp-action="Create">Create New Ticket</a>
 </p>
 
-<p>
-    <a class="btn btn-primary" asp-controller="Tickets" asp-action="Create">Create New Ticket</a>
-</p>
+
 
 @* ctrl + k + c  - za komentiranje*@
 @* da gi prikazeme kako grids *@
-<div class="container">
-
+<div>
    @*TODO: za sekoj tri da napravime nov red  *@
     @for (int i = 0; i < Model.Count; i++)
-    {   <div class="column md-4">
+    { 
+        @* if(i % 3 == 0) GRID LAYOUT NE RABOTI
+        {
+            @:<div class="row">
+        }
+        *@
+
+        <div class="column md-4">
             <div class="card" style="width: 18rem;">
                 <img src="@Model[i].ImageUrl" class="card-img-top" alt="...">
                 <div class="card-body">
@@ -34,6 +39,12 @@
                 </div>
             </div>
         </div>
+
+        @* 
+        if (i % 3 == 2)
+        {
+            @:</div>
+        } *@
     }
 </div>
 
