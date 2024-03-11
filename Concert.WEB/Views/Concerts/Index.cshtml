@@ -10,6 +10,10 @@
     <a class="btn btn-primary" asp-action="Create">Create New Concert</a>
 </p>
 
+<p>
+    <a class="btn btn-primary" asp-controller="Tickets" asp-action="Create">Create New Ticket</a>
+</p>
+
 @* ctrl + k + c  - za komentiranje*@
 @* da gi prikazeme kako grids *@
 <div class="container">
@@ -24,7 +28,6 @@
                     <p class="card-text">@Model[i].ConcertPlace</p>
                     <p class="card-text">Price: @Model[i].ConcertPrice</p>
                     <p class="card-text">Date: @Model[i].ConcertDate.ToString()</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
                     <a class="btn btn-primary"  asp-action="Edit" asp-route-id="@Model[i].Id">Edit</a> |
                     <a class="btn btn-primary"  asp-action="Details" asp-route-id="@Model[i].Id">Details</a> |
                     <a class="btn btn-primary"  asp-action="Delete" asp-route-id="@Model[i].Id">Delete</a>
