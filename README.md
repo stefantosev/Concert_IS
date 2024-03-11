@@ -1,21 +1,25 @@
 # Concert
 
 ## RABOTA SO BAZA
+- promena na ime na baza vo appsettings.json
+  
 - koga ke napravime modeli vo tools -> nuget console -> add-migration {ime} -> update-database
   vo slucaj na error -> remove-migration i pa nanovo
 
  - pri sekoja promena na modelot se pravi proceduralno
 
--  vo ApplicationDbContext gi pisuvame vie linii 
+-  vo ApplicationDbContext gi pisuvame vie linii
+
  	public virtual DbSet<ConcertLab> Concerts { get; set; }
 
 	public virtual DbSet<Ticket> Tickets { get; set; }
 
 	public virtual DbSet<ConcertAppUser> ConcertAppUsers { get; set; }
 
-- Ako zaglavime pri promena vo modelot da ne vrati na pocetok (brishe se) 
+- Ako zaglavime pri promena vo modelot da ne vrati na pocetok (brishe se)
+  
         update-database -migration: 0
-   
+
 	add-migration sekeiskrsam
 
 	update-database
