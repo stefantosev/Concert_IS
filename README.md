@@ -13,6 +13,11 @@
 
 	public virtual DbSet<ConcertAppUser> ConcertAppUsers { get; set; }
 
+- Ako zaglavime pri promena vo modelot da ne vrati na pocetok (brishe se) 
+- 	update-database -migration: 0
+	add-migration sekeiskrsam
+	update-database
+
 ## RABOTA SO MODELI
 
 - koga kreirame modeli gi updateirame vo program.cs na sekoe mesto kaj so pisue IDENTITY USER
